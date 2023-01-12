@@ -1,6 +1,6 @@
 # Projekt-Dokumentation
 
-✍️ Ihr Nachname
+✍️ Peterhans
 
 | Datum | Version | Zusammenfassung                                              |
 | ----- | ------- | ------------------------------------------------------------ |
@@ -31,7 +31,7 @@
 
 # 3 Datenbank
 
-✍️ Wie steuern Sie Ihre Datenbank an? Wie ist das Interface aufgebaut? 
+Als Datenbank wird "Firebase" benutzt. Mit einer Initialisierung in einer JavaScript-Datei kann man auf sie zugreifen. Das Interface der Datenbank ist mit Sammlungen und in denen mit Dokumentationen aufgebaut.
 
 # 4.1 User Stories
 
