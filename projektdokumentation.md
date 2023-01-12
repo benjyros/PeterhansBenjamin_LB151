@@ -18,16 +18,17 @@
 
 # 1 Analyse
 
-✍️ Beschreiben Sie, auf welchem Tier Sie die dynamischen Elemente der Anwendung unterbringen möchten:
-
-* Tier 1 (Presentation): ...
-* Tier 2 (Webserver):
-* Tier 3 (Application Server):
-* Tier 4 (Dataserver):
+* Tier 1 (Presentation): Administrator-Ansicht, Spielansicht für den Kandidaten
+* Tier 2 (Webserver): Formular für das Anmelden, Glücksrad drehen, Eingaben der Vokalen und Konsonanten
+* Tier 3 (Application Server): Verarbeitung der eingegebenen Werte wie für das Anmelden oder das Spielen selbst
+* Tier 4 (Dataserver): Verwaltung der Daten für das Spiel mittels einer Datenbank
 
 # 2 Technologie
 
-✍️ Beschreiben Sie für dieselben Tiers, welche Programmiersprache bzw. Technologie Sie verwenden möchten.
+* Tier 1 (Presentation): HTML, CSS, JavaScript
+* Tier 2 (Webserver): JavaScript
+* Tier 3 (Application Server): JavaScript
+* Tier 4 (Dataserver): Firebase
 
 # 3 Datenbank
 
