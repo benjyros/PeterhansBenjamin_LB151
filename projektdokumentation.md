@@ -49,6 +49,12 @@ Als Datenbank wird "Firebase" benutzt. Mit einer Initialisierung in einer JavaSc
 | 7    | Muss | Qualität | Als Kandidat möchte ich meinen Kontostand ansehen können, damit ich weiss, wie riskant ich das Spiel spielen soll. |
 | 8    | Muss | Qualität | Als Kandidat möchte ich meine Lebenspunkte ansehen können, damit ich nicht vergesse, wieviele Lebenspunkte ich während dem Spiel habe. |
 | 9    | Muss | Qualität | Als Kandidat möchte ich, dass mir mitgeteilt wird, ob meine Antwort richtig oder falsch war, damit ich weiss, welche Buchstaben ich als nächstes angeben muss. |
+| 10   | Muss | Qualität | Als Kandidat möchte ich eine Highscore-Liste mit Rand, Name des Spielers, Zeitpunkt des Spiels, Geldbetrag und Anzahl Runden ansehen können, damit ich alle Informationen von allen Spielern einsehen kann. |
+| 11   | Muss | Qualität | Als Kandidat möchte ich eine Highscore-Liste sortiert nach Rang und Geldbetrag ansehen können, damit ich schnell den errsten Platz ansehen kann. |
+| 12   | Muss | Qualität | Als Kandidat möchte ich, dass die Phrasen und Rätselwörter mir nur einmal gestellt werden, damit ich eine Herausforderung habe, die Lösung herauszufinden. |
+| 13   | Muss | Funktional | Als Kandidat möchte ich jederzeit spielen, oder aufhören und meinen Gewinn in die Highscore-Liste übernehmen können, | 14   | Muss | Qualität | Als Kandidat möchte ich eine spielbare Anzahl von Phrasen und Wörterdamit bei möglichen Problemen der Gewinn wirklich abgespeichert wird. |
+| 14   | Muss | Qualität | Als Kandidat möchte ich ein Spiel mit einer spielbaren Anzahl von Phrasen und Wörter spielen können, damit ich nicht zu lange an einem Spiel dran bin. |
+| 15   | Muss | Qualität | Als Kandidat möchte ich, dass die Anzahl Spielrunden gezählt wird, damit ich am Ende den durchschnittlichen Gewinn pro Runde berechnen kann. |
 
 
 # 4.2 Testfälle
@@ -71,8 +77,14 @@ Als Datenbank wird "Firebase" benutzt. Mit einer Initialisierung in einer JavaSc
 ✍️ Die Nummer hat das Format `N.m`, wobei `N` die Nummer der User Story ist, die der Testfall abdeckt, und `m` von `1` an nach oben gezählt. Beispiel: Der dritte Testfall, der die zweite User Story abdeckt, hat also die Nummer `2.3`.
 
 # 5 Prototyp
+### Mockup des Admin-Interface:<br>
+![My Image](Datas/mockup-admin.png)
 
-✍️ Erstellen Sie Prototypen für das GUI (Admin-Interface und Quiz-Seite).
+### Mockup der Spielansicht 1 des Kandidaten:<br>
+![My Image](Datas/mockup-game1.png)
+
+### Mockup der Spielansicht 2 des Kandidaten:<br>
+![My Image](Datas/mockup-game2.png)
 
 # 6 Implementation
 
