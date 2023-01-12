@@ -48,7 +48,7 @@ Als Datenbank wird "Firebase" benutzt. Mit einer Initialisierung in einer JavaSc
 | 6    | Muss | Funktional | Als Kandidat möchte ich meinen Namen eingeben können, damit ich auf der Highscore-Liste angezeigt werde. |
 | 7    | Muss | Qualität | Als Kandidat möchte ich meinen Kontostand ansehen können, damit ich weiss, wie riskant ich das Spiel spielen soll. |
 | 8    | Muss | Qualität | Als Kandidat möchte ich meine Lebenspunkte ansehen können, damit ich nicht vergesse, wieviele Lebenspunkte ich während dem Spiel habe. |
-| 9    | Muss | Qualität | Als Kandidat möchte ich, dass mir mitgeteilt wird, ob ich meine Antwort richtig oder falsch war, damit ich nachvollziehen kann, warum mein Kontostand geändert hatte. |
+| 9    | Muss | Qualität | Als Kandidat möchte ich, dass mir mitgeteilt wird, ob meine Antwort richtig oder falsch war, damit ich weiss, welche Buchstaben ich als nächstes angeben muss. |
 
 
 # 4.2 Testfälle
@@ -63,10 +63,10 @@ Als Datenbank wird "Firebase" benutzt. Mit einer Initialisierung in einer JavaSc
 | 3.2  | <ul><li>Die Webapplikation ist auf einem Webbrowser geöffnet</li><li>Administrator-Modus ist an (Benutzername = "testAdmin123", Passwort = "passAdmin456")</li></ul> | <ol><li>Klicke auf "Kategorien administrieren"</li><li>Klicke in der Liste bei der Kategorie "KatTesting" auf "hinzufügen"</li><li>Wähle "KatWort" aus</li><li>Klicke auf "Bestätigen"</li></ol> | Unter der Kategorie wird das ausgewählte Wort hinzugefügt und unter dieser Kategorie angezeigt. |
 | 4.1  | <ul><li>Die Webapplikation ist auf einem Webbrowser geöffnet</li><li>Administrator-Modus ist an (Benutzername = "testAdmin123", Passwort = "passAdmin456")</li></ul> | <ol><li>Klicke auf "Highscore-Liste administrieren"</li><li>Klicke in der Liste beim Kandidat "DerManipulierer" auf "entfernen"</li><li>Klicke auf "Bestätigen"</li></ol> | Von der Highscore-Liste wurde der ausgewählte Kandidat entfernt. |
 | 5.1  | <ul><li>Das Git-Repository <a href='https://github.com/benjyros/PeterhansBenjamin_LB151' target="_blank">PeterhansBenjamin_LB151</a> ist geöffnet</li></ul> | <ol><li>Klicke rechts auf den Link für die Website</li></ol> | Dem Benutzer wird die Website zum Spiel angezeigt. |
-| 6.1  |              |         |                   |
-| 7.1  |              |         |                   |
-| 8.1  |              |         |                   |
-| 9.1  |              |         |                   |
+| 6.1  | <ul><li>Die Webapplikation ist auf einem Webbrowser geöffnet</li></ul> | <ol><li>Klicke auf "Jetzt Spielen"</li><li>Gebe als Namen "EinKandidat" ein</li><li>Klicke auf "Bestätigen"</li><li>Klicke in der Navigation auf "Highscore-Liste"</li></ol> | In der Highscore-Liste wird der neu erstelle Spieler angezeigt. |
+| 7.1  | <ul><li>Die Webapplikation ist auf einem Webbrowser geöffnet</li></ul> | <ol><li>Klicke auf "Jetzt Spielen"</li><li>Gebe als Namen "EinKandidat2" ein</li><li>Klicke auf "Bestätigen"</li></ol> | Oben rechts des Spielansichts wird der Kontostand des Spielers angezeigt.  |
+| 8.1  | <ul><li>Die Webapplikation ist auf einem Webbrowser geöffnet</li></ul> | <ol><li>Klicke auf "Jetzt Spielen"</li><li>Gebe als Namen "EinKandidat3" ein</li><li>Klicke auf "Bestätigen"</li></ol> | Oben links des Spielansichts werden die Lebenspunkte des Spielers angezeigt. |
+| 9.1  | <ul><li>Die Webapplikation ist auf einem Webbrowser geöffnet</li></ul> | <ol><li>Klicke auf "Jetzt Spielen"</li><li>Gebe als Namen "EinKandidat4" ein</li><li>Klicke auf "Bestätigen"</li><li>Klicke auf "Drehen"</li><li>Gebe unter "Konsonanten" den Buchstabem 'm' ein</li><li>Klicke auf "Raten"</li></ol> | Es wird angezeigt, ob der eingegebene Konsonant richtig war oder nicht. |
 
 ✍️ Die Nummer hat das Format `N.m`, wobei `N` die Nummer der User Story ist, die der Testfall abdeckt, und `m` von `1` an nach oben gezählt. Beispiel: Der dritte Testfall, der die zweite User Story abdeckt, hat also die Nummer `2.3`.
 
