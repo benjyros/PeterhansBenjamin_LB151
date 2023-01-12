@@ -1,6 +1,6 @@
 # Projekt-Dokumentation
 
-✍️ Peterhans
+Peterhans
 
 | Datum | Version | Zusammenfassung                                              |
 | ----- | ------- | ------------------------------------------------------------ |
