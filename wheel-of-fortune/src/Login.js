@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 import { auth } from "./config";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword  } from "firebase/auth";
 
 export default function Login() {
 
