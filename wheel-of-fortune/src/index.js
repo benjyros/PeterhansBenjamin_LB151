@@ -11,8 +11,10 @@ const renderApp = () => {
   root.render(
     <React.StrictMode>
       <BrowserRouter>
-        <Navbar />
-        <App />
+        <div className='flex flex-col h-screen'>
+          <Navbar />
+          <App />
+        </div>
       </BrowserRouter>
     </React.StrictMode>
   );
