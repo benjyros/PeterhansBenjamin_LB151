@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Header from "./Header";
 
 import { auth, firestore } from "./config";
-import { getDocs, collection, doc, updateDoc } from "firebase/firestore";
+import { getDoc, getDocs, collection, doc, updateDoc } from "firebase/firestore";
 
 export default function Play() {
     const [wordIndex, setWordIndex] = useState(0);
@@ -13,6 +13,9 @@ export default function Play() {
     const [phrasesToGuess, setPhrasesToGuess] = useState([]);
     const [phraseToGuess, setPhraseToGuess] = useState("");
     const [guessedPhrase, setGuessedPhrase] = useState();
+    const [lastSpin, setLastSpin] = useState("");
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         var phrasesToGuess = [];
@@ -30,16 +33,38 @@ export default function Play() {
             }).catch((error) => {
                 console.log("Error getting documents: ", error);
             });
+
+        const docRef = doc(firestore, "benutzer", auth.currentUser.uid);
+        getDoc(docRef)
+            .then((docSnap) => {
+                if(docSnap.data().lastSpin === "Bankrott"){
+                    navigate('/start', { replace: true });
+                }
+                else{
+                    alert(docSnap.data().lastSpin);
+                    setLastSpin(docSnap.data().lastSpin);
+                }
+            })
     }, []);
 
     const handleGuessVocal = () => {
         if (vocal !== "") {
-            setGuessedPhrase(
-                phrasesToGuess[0].phrase
-                    .split("")
-                    .map((letter) => (guess.includes(letter) ? letter : "_"))
-                    .join(" ")
-            );
+            const docRef = doc(firestore, "benutzer", auth.currentUser.uid);
+            getDoc(docRef)
+            .then((docSnap) => {
+                if(docSnap.data().balance < 300){
+                    alert("Guthaben zu klein um ein Vokal zu kaufen.")
+                }
+                else{
+                    setGuessedPhrase(
+                        phrasesToGuess[0].phrase
+                            .split("")
+                            .map((letter) => (guess.includes(letter) ? letter : "_"))
+                            .join(" ")
+                    );
+                }
+            })
+            
         }
         else {
             alert("Bitte geben Sie einen Vokal ein.");
@@ -79,7 +104,7 @@ export default function Play() {
                             </div>
                             <div className="col-start-2 flex flex-col justify-center grid place-content-center">
                                 <select onChange={(e) => setVocal(e.target.value)} className="select bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-16 h-8">
-                                    <option disabled defaultValue>{vocal}</option>
+                                    <option disabled defaultValue></option>
                                     <option>a</option>
                                     <option>e</option>
                                     <option>i</option>

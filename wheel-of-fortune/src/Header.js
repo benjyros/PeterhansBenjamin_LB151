@@ -29,10 +29,10 @@ export default function Header() {
     return (
         <div className="grid grid-cols-2 mt-16">
             <div className="col-span-1 ...">
-                <p className="grid place-content-start">Lives: {lives}</p>
+                <p className="grid place-content-start">Leben: {lives}</p>
             </div>
             <div className="...">
-                <p className="grid place-content-end">Balance: {balance}</p>
+                <p className="grid place-content-end">Guthaben: {balance}</p>
             </div>
         </div>
     );

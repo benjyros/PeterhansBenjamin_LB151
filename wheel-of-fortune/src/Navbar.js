@@ -6,6 +6,11 @@ import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { collection, getDocs, where, query } from "firebase/firestore";
 import { useAuthState } from 'react-firebase-hooks/auth';
 
+import { doc, setDoc } from "firebase/firestore";
+
+
+import woerter from './woerter.json';
+
 function Navbar() {
     const [isAdmin, setIsAdmin] = useState(false);
     const [user] = useAuthState(auth);
@@ -64,6 +69,27 @@ function Navbar() {
             }
         })
 
+        for(let i = 0; i < 10; i++){
+            setDoc(doc(firestore, "restricted", "Wort" + (i+1)), {
+                kategorie: "Wort",
+                phrase: woerter.Wörter[(i+1)]
+            });
+        }
+        alert("Halo");
+
+        for(let i = 0; i < 10; i++){
+            setDoc(doc(firestore, "restricted", "Gruppe" + (i+1)), {
+                kategorie: "Gruppe",
+                phrase: woerter.Phrasen[(i+1)]
+            });
+        }
+
+        for(let i = 0; i < 10; i++){
+            setDoc(doc(firestore, "restricted", "Redewendung" + (i+1)), {
+                kategorie: "Redewendung",
+                phrase: woerter.Redewendungen[(i+1)]
+            });
+        }
     }
 
     return (

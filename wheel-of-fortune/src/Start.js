@@ -56,7 +56,9 @@ export default function Start() {
             name: name,
             balance: 0,
             lives: 3,
-            lastSpin: ""
+            lastSpin: "",
+            highscoreValid: false,
+            vocalsLeft: "a e i o u ä ö ü"
         });
     }
 
