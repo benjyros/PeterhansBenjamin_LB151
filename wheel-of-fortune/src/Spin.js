@@ -3,7 +3,7 @@ import wheelData from "./wheel.json";
 import { useNavigate } from 'react-router-dom';
 
 import { auth, firestore } from "./config";
-import { getDoc, doc } from "firebase/firestore";
+import { getDoc, doc, updateDoc } from "firebase/firestore";
 
 export default function Spin() {
     const [result, setResult] = useState(null);
@@ -38,15 +38,14 @@ export default function Spin() {
     };
 
     const handleResult = () => {
-        if(result === "Extra Dreh"){
+        if (result === "Extra Dreh") {
             return;
         }
-
-        updateDoc(result);
+        updateUser(result);
         navigate('/play', { replace: true });
     }
 
-    const updateDoc = (lastSpin) => {
+    const updateUser = (lastSpin) => {
         const docRef = doc(firestore, "benutzer", auth.currentUser.uid);
 
         updateDoc(docRef, {
