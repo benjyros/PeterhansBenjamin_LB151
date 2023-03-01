@@ -1,34 +1,18 @@
 import React, { useState, useEffect } from "react";
 import wheelData from "./wheel.json";
 import { useNavigate } from 'react-router-dom';
+import Header from "./Header";
 
 import { auth, firestore } from "./config";
-import { getDoc, doc, updateDoc } from "firebase/firestore";
+import { doc, updateDoc } from "firebase/firestore";
 
 export default function Spin() {
     const [result, setResult] = useState(null);
-    const [lives, setLives] = useState();
-    const [balance, setBalance] = useState();
 
     const navigate = useNavigate();
 
     useEffect(() => {
-        const user = auth.currentUser;
-        if (user) {
-            const uid = user.uid;
-            const docRef = doc(firestore, "benutzer", uid);
-            getDoc(docRef)
-                .then((docSnap) => {
-                    if (docSnap.exists()) {
-                        setLives(docSnap.data().lives);
-                        setBalance(docSnap.data().balance);
-                    } else {
-                        console.log("No such document!");
-                    }
-                }).catch((error) => {
-                    console.log("Error getting document:", error);
-                });
-        }
+
     }, []);
 
     const spinWheel = () => {
@@ -55,14 +39,7 @@ export default function Spin() {
 
     return (
         <div className="container mx-auto">
-            <div className="grid grid-cols-2 mt-16">
-                <div className="col-span-1 ... bg-green-600">
-                    <p className="grid place-content-start">Lives: {lives}</p>
-                </div>
-                <div className="...">
-                    <p className="grid place-content-end">Balance: {balance}</p>
-                </div>
-            </div>
+            <Header />
 
             <div className="mx-auto place-content-center mt-40">
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '50px' }}>
