@@ -7,6 +7,10 @@ import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+if (window.location.pathname === '/') {
+  window.location.replace('/start');
+}
+
 const renderApp = () => {
   root.render(
     <React.StrictMode>
