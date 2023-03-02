@@ -4,16 +4,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import { auth, firestore } from './config';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { collection, getDocs, where, query } from "firebase/firestore";
-import { useAuthState } from 'react-firebase-hooks/auth';
-
-import { doc, setDoc } from "firebase/firestore";
-
-
-import woerter from './woerter.json';
 
 function Navbar() {
     const [isAdmin, setIsAdmin] = useState(false);
-    const [user] = useAuthState(auth);
 
     const navigate = useNavigate();
 
@@ -53,45 +46,6 @@ function Navbar() {
             })
     }
 
-    const showuid = () => {
-        var uid = "";
-        if (user !== null) {
-            uid = auth.currentUser.uid;
-        }
-        const querySnapshotPromise = getDocs(query(collection(firestore, "admins"), where("adminId", "==", uid)));
-        querySnapshotPromise.then((querySnapshot) => {
-            if (querySnapshot.empty) {
-                // document exists
-                alert("no admin");
-            } else {
-                // document does not exist
-                alert("admin");
-            }
-        })
-
-        for(let i = 0; i < 10; i++){
-            setDoc(doc(firestore, "restricted", "Wort" + (i+1)), {
-                kategorie: "Wort",
-                phrase: woerter.Wörter[(i+1)]
-            });
-        }
-        alert("Halo");
-
-        for(let i = 0; i < 10; i++){
-            setDoc(doc(firestore, "restricted", "Gruppe" + (i+1)), {
-                kategorie: "Gruppe",
-                phrase: woerter.Phrasen[(i+1)]
-            });
-        }
-
-        for(let i = 0; i < 10; i++){
-            setDoc(doc(firestore, "restricted", "Redewendung" + (i+1)), {
-                kategorie: "Redewendung",
-                phrase: woerter.Redewendungen[(i+1)]
-            });
-        }
-    }
-
     return (
         <div className="navbar bg-base-100 sticky top-0 z-50 flex bg-gray-50 dark:bg-gray-700">
             <div className="navbar-start">
@@ -117,7 +71,6 @@ function Navbar() {
                 </ul>
             </div>
             <div className="navbar-end">
-                <label onClick={showuid} className='btn'>Show uid</label>
                 {isAdmin ? (
                     <label onClick={handleSignOut} className='btn' htmlFor="modalSignOut" >Abmelden</label>
                 ) : (
