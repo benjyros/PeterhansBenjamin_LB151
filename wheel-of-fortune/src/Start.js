@@ -22,20 +22,21 @@ export default function Start() {
                 const querySnapshotPromise = getDocs(query(collection(firestore, "admins"), where("adminId", "==", uid)));
                 querySnapshotPromise.then((querySnapshot) => {
                     if (querySnapshot.empty) {
-                        signOut(auth)
-                            .then(() => {
-                                setIsAdmin(false);
-                            })
-                            .catch((error) => {
-                                console.log(error);
-                            })
+                        setIsAdmin(false);
                     }
                     else {
                         setIsAdmin(true);
                     }
                 })
             } else {
-                setIsAdmin(false);
+                signOut(auth)
+                    .then(() => {
+                        setIsAdmin(false);
+                    })
+                    .catch((error) => {
+                        console.log(error);
+                    })
+
             }
         });
         return unsubscribe;
