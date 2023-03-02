@@ -196,6 +196,9 @@ export default function Play() {
             alert("Leider falsch geraten.");
             lives--;
         }
+        else {
+            alert("Sie haben richtig geraten!");
+        }
 
         let balance = docSnap.data().balance + (parseInt(docSnap.data().lastSpin) * count);
         const vowels = ['a', 'e', 'i', 'o', 'u', 'ä', 'ö', 'ü'];
