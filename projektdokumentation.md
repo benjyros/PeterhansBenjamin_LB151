@@ -8,9 +8,7 @@ Peterhans
 | 27.02.2023 | 0.0.2   | Registrierung wurde entfernt und der Adminmodus für das Login implementiert. |
 | 28.02.2023 | 0.0.3   | Der Startpage wurde einschliesslich des Adminmodus implementiert. |
 | 01.03.2023 | 0.0.4   | Der Spinner und der Spielmechanismus mit den Phrasen wurde implementiert. |
-| 02.03.2023 | 0.0.5   | Highscoreliste mit Adminmodus wurde hinzugefügt. |
-|       | 0.0.6   |  |
-|       | 1.0.0   |  |
+| 02.03.2023 | 1.0.0   | Highscoreliste mit Adminmodus wurde hinzugefügt. |
 
 # 0 Ihr Projekt
 
@@ -146,7 +144,7 @@ Als Datenbank wird "Firebase" benutzt. Mit einer Initialisierung in einer JavaSc
 | 2.1   | 02.03.2023 | NOK      | Peterhans Benjamin |                  |
 | 3.1   | 02.03.2023 | NOK      | Peterhans Benjamin |                  |
 | 4.1   | 02.03.2023 | OK       | Peterhans Benjamin |[![US4]](Datas/4.mp4)|
-| 5.1   | 02.03.2023 | OK       | Peterhans Benjamin ||
+| 5.1   | 02.03.2023 | OK       | Peterhans Benjamin |[![US4]](Datas/5.mp4)|
 | 6.1   | 02.03.2023 | OK       | Peterhans Benjamin |[![US6]](Datas/6.mp4)|
 | 7.1   | 02.03.2023 | OK       | Peterhans Benjamin |[![US7]](Datas/7.mp4)|
 | 8.1   | 02.03.2023 | OK       | Peterhans Benjamin |[![US8]](Datas/8.mp4)|
