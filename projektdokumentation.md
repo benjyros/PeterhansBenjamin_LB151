@@ -73,7 +73,12 @@ Als Datenbank wird "Firebase" benutzt. Mit einer Initialisierung in einer JavaSc
 | 9.1  | <ul><li>Die Webapplikation ist auf einem Webbrowser geöffnet</li></ul> | <ol><li>Klicke auf "Jetzt Spielen"</li><li>Gebe als Namen "EinKandidat4" ein</li><li>Klicke auf "Bestätigen"</li><li>Klicke auf "Drehen"</li><li>Gebe unter "Konsonanten" den Buchstabem 'm' ein</li><li>Klicke auf "Raten"</li></ol> | Es wird angezeigt, ob der eingegebene Konsonant richtig war oder nicht. |
 | 10.1  | <ul><li>Die Webapplikation ist auf einem Webbrowser geöffnet</li></ul> | <ol><li>Klicke auf "Highscoreliste"</li><li>Betrachte die Daten an</li> | Alle Daten (Rang, Name, Zeit, Guthaben und Runden) werden angezeigt. |
 | 11.1  | <ul><li>Die Webapplikation ist auf einem Webbrowser geöffnet</li></ul> | <ol><li>Klicke auf "Highscoreliste"</li><li>Betrachte die Daten an</li> | Die Daten werden aufsteigend angezeigt. |
-| 12.1  | <ul><li>Die Webapplikation ist auf einem Webbrowser geöffnet</li></ul> | <ol><li>Klicke auf "Highscoreliste"</li><li>Betrachte die Daten an</li> | Die Daten werden aufsteigend angezeigt. |
+| 12.1  | <ul><li>Die Webapplikation ist auf einem Webbrowser geöffnet</li></ul> | <ol><li>Klicke auf "Spiel spielen"</li><li>Spiele das Spiel</li> | Die zweite Phrase, die man erraten muss, unterscheidet sich von der ersten. |
+| 13.1  | <ul><li>Die Webapplikation ist auf einem Webbrowser geöffnet</li></ul> | <ol><li>Klicke auf "Spiel spielen"</li><li>Rate den Konsonanten "m" ein</li><li>Klicke auf "Beenden und Speichern"</li><li>Klicke auf "Highscoreliste"</li> | Die Daten des Spiels werden angezeigt |
+| 14.1  | <ul><li>Die Webapplikation ist auf einem Webbrowser geöffnet</li></ul> | <ol><li>Klicke auf "Spiel spielen"</li><li>Spiele das Spiel</li> | Insgesamt kann man 12 Phrasen erraten. |
+| 15.1  | <ul><li>Die Webapplikation ist auf einem Webbrowser geöffnet</li></ul> | <ol><li>Klicke auf "Spiel spielen"</li><li>Rate den Konsonanten "s" ein</li><li>Klicke auf "Beenden und Speichern"</li><li>Klicke auf "Highscoreliste"</li> | Die Anzahl Runden des Spiels werden angezeigt |
+| A.1  | <ul><li>Die Webapplikation ist auf einem Webbrowser geöffnet</li></ul> | <ol><li>Klicke auf "Spiel spielen"</li><li>Spiele das Spiel</li> | Wenn man beim Drehen "Extra Dreh" steht, kann man nochmals drehen. |
+| B.1  | <ul><li>Die Webapplikation ist auf einem Webbrowser geöffnet</li></ul> | <ol><li>Klicke auf "Spiel spielen"</li><li>Spiele das Spiel</li> | Wenn man beim Drehen "Gratis Vokal" steht, kann man sich einen gratis Vokal holen. |
 
 # 5 Prototyp
 ### Mockup des Admin-Interface:<br>
