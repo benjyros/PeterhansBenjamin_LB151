@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import wheelData from "./wheel.json";
 
 import { auth, firestore } from "./config";
+import { signOut } from 'firebase/auth';
 import { getDoc, getDocs, collection, doc, updateDoc } from "firebase/firestore";
 
 export default function Play() {
@@ -48,7 +49,14 @@ export default function Play() {
             setUid(user.uid);
         }
         else {
-            navigate('/start', { replace: true });
+            signOut(auth)
+                .then(() => {
+                    navigate('/start', { replace: true });
+                })
+                .catch((error) => {
+                    console.log(error);
+                })
+
         }
 
     }, [navigate]);
@@ -189,10 +197,6 @@ export default function Play() {
             lives--;
         }
 
-        updateDoc(docRef, {
-            lives: lives
-        });
-
         let balance = docSnap.data().balance + (parseInt(docSnap.data().lastSpin) * count);
         const vowels = ['a', 'e', 'i', 'o', 'u', 'ä', 'ö', 'ü'];
 
@@ -207,8 +211,12 @@ export default function Play() {
             }
         }
 
+        let rounds = docSnap.data().rounds + 1;
+
         updateDoc(docRef, {
-            balance: balance
+            balance: balance,
+            lives: lives,
+            rounds: rounds
         });
 
         setLives(lives);
@@ -230,11 +238,25 @@ export default function Play() {
         getDoc(docRef)
             .then((docSnap) => {
                 if (docSnap.data().balance > 0) {
+                    const currentTime = new Date().toLocaleString('en-GB', {
+                        day: '2-digit',
+                        month: '2-digit',
+                        year: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                    })
                     updateDoc(docRef, {
+                        time: currentTime,
                         highscoreValid: true
                     });
                 }
-                navigate('/start', { replace: true });
+                signOut(auth)
+                    .then(() => {
+                        navigate('/start', { replace: true });
+                    })
+                    .catch((error) => {
+                        console.log(error);
+                    })
             })
     }
 

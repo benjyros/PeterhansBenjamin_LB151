@@ -62,6 +62,8 @@ export default function Start() {
             name: name,
             balance: 0,
             lives: 3,
+            rounds: 0,
+            time: "",
             lastSpin: "",
             beforeLastSpin: "",
             highscoreValid: false,
