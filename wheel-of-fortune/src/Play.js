@@ -328,7 +328,7 @@ export default function Play() {
                             </div>
                         </form>
                     </div>
-                    {isGuessFinished && <label onClick={showSpinner}>Weiter</label>}
+                    {isGuessFinished && <a className="link" onClick={showSpinner}>Weiter</a>}
                 </div>
             ) : (
                 <div className="mx-auto place-content-center mt-40">
@@ -339,6 +339,8 @@ export default function Play() {
                     </div>
                 </div>
             )}
+
+            <label className="mt-4 btn" onClick={addUserToHighscorlist}>Beenden und Speichern</label>
 
             <input type="checkbox" id="modalResult" className="modal-toggle" />
             <div className="modal">
