@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import { auth, firestore } from "./config";
-import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { onAuthStateChanged } from 'firebase/auth';
 import { doc, getDocs, collection, orderBy, query, where, deleteDoc } from "firebase/firestore";
 
 export default function Highscorelist() {
