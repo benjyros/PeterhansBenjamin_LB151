@@ -34,8 +34,6 @@ Als Datenbank wird "Firebase" benutzt. Mit einer Initialisierung in einer JavaSc
 
 # 4.1 User Stories
 
-✍️ Formulieren Sie weitere, eigene Anforderungen und Testfälle, wie Sie Ihre Applikation erweitern möchten. Geben Sie diesen statt einer Nummer einen Buchstaben (`A`, `B`, etc.)
-
 | US-№ | Verbindlichkeit | Typ  | Beschreibung                       |
 | ---- | --------------- | ---- | ---------------------------------- |
 | 1    | Muss | Funktional | Als Administrator möchte ich mich anmelden können, damit ich das Spiel administrieren kann. |
@@ -74,8 +72,6 @@ Als Datenbank wird "Firebase" benutzt. Mit einer Initialisierung in einer JavaSc
 | 8.1  | <ul><li>Die Webapplikation ist auf einem Webbrowser geöffnet</li></ul> | <ol><li>Klicke auf "Jetzt Spielen"</li><li>Gebe als Namen "EinKandidat3" ein</li><li>Klicke auf "Bestätigen"</li></ol> | Oben links des Spielansichts werden die Lebenspunkte des Spielers angezeigt. |
 | 9.1  | <ul><li>Die Webapplikation ist auf einem Webbrowser geöffnet</li></ul> | <ol><li>Klicke auf "Jetzt Spielen"</li><li>Gebe als Namen "EinKandidat4" ein</li><li>Klicke auf "Bestätigen"</li><li>Klicke auf "Drehen"</li><li>Gebe unter "Konsonanten" den Buchstabem 'm' ein</li><li>Klicke auf "Raten"</li></ol> | Es wird angezeigt, ob der eingegebene Konsonant richtig war oder nicht. |
 
-✍️ Die Nummer hat das Format `N.m`, wobei `N` die Nummer der User Story ist, die der Testfall abdeckt, und `m` von `1` an nach oben gezählt. Beispiel: Der dritte Testfall, der die zweite User Story abdeckt, hat also die Nummer `2.3`.
-
 # 5 Prototyp
 ### Mockup des Admin-Interface:<br>
 ![My Image](Datas/mockup-admin.png)
@@ -87,8 +83,6 @@ Als Datenbank wird "Firebase" benutzt. Mit einer Initialisierung in einer JavaSc
 ![My Image](Datas/mockup-game2.png)
 
 # 6 Implementation
-
-✍️ Halten Sie fest, wann Sie welche User Story bearbeitet haben
 
 | User Story | Datum      | Beschreibung |
 | ---------- | ---------- | ------------ |
@@ -136,13 +130,14 @@ Als Datenbank wird "Firebase" benutzt. Mit einer Initialisierung in einer JavaSc
 
 # 8 Testprotokoll
 
-✍️ Fügen Sie hier den Link zu dem Video ein, welches den Testdurchlauf dokumentiert.
-
 | TC-№  | Datum      | Resultat | Tester             | Video            |
 | ----- | ---------- | -------- | ------------------ | ---------------- |
 | 1.1   | 02.03.2023 | OK       | Peterhans Benjamin |[![US1]](Datas/1.mp4)|
 | 2.1   | 02.03.2023 | NOK      | Peterhans Benjamin |                  |
+| 2.2   | 02.03.2023 | NOK      | Peterhans Benjamin |                  |
+| 2.3   | 02.03.2023 | NOK      | Peterhans Benjamin |                  |
 | 3.1   | 02.03.2023 | NOK      | Peterhans Benjamin |                  |
+| 3.2   | 02.03.2023 | NOK      | Peterhans Benjamin |                  |
 | 4.1   | 02.03.2023 | OK       | Peterhans Benjamin |[![US4]](Datas/4.mp4)|
 | 5.1   | 02.03.2023 | OK       | Peterhans Benjamin |[![US4]](Datas/5.mp4)|
 | 6.1   | 02.03.2023 | OK       | Peterhans Benjamin |[![US6]](Datas/6.mp4)|
@@ -158,14 +153,4 @@ Als Datenbank wird "Firebase" benutzt. Mit einer Initialisierung in einer JavaSc
 | A.1   | 02.03.2023 | OK       | Peterhans Benjamin |[![USA]](Datas/12.mp4)|
 | B.1   | 02.03.2023 | OK       | Peterhans Benjamin |[![USB]](Datas/12.mp4)|
 
-✍️ Vergessen Sie nicht, ein Fazit hinzuzufügen, welches das Test-Ergebnis einordnet.
-
-# 9 `README.md`
-
-✍️ Beschreiben Sie ausführlich in einer README.md, wie Ihre Applikation gestartet und ausgeführt wird. Legen Sie eine geeignete Möglichkeit (Skript, Export, …) bei, Ihre Datenbank wiederherzustellen.
-
-# 10 Allgemeines
-
-- [ ] Ich habe die Rechtschreibung überprüft
-- [ ] Ich habe überprüft, dass die Nummerierung von Testfällen und User Stories übereinstimmen
-- [ ] Ich habe alle mit ✍️ markierten Teile ersetzt
+Fazit: Alle Testfälle (ausser 5) haben erfolgreich bestanden. Die Testfälle 2 und 3 konnten nicht getestet werden, da diese Funktionen noch nicht implementiert wurden. Ansonsten funktionieren alle einwandfrei, weshalb sie zur Veröffentlichung der ersten Webversion bereitgestellt werden können.
