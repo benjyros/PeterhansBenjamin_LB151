@@ -255,15 +255,18 @@ export default function Play() {
 
             {hasSpinned ? (
                 <div className="grid grid-cols-2 grid-rows-2 space-x-4 space-y-4 mt-40">
-                    <div className="col-start-1 row-span-2 bg-blue-600">
+                    <div className="col-start-1 row-span-2 bg-gray-600 p-4 rounded-md">
                         <h1>Kategorie: {phrasesToGuess[wordIndex]?.category}</h1>
                         <h2>{revealedString}</h2>
-                        <h3>Verwendete Buchstaben: {guessedLetters}</h3>
+                        <br></br>
+                        <br></br>
+                        <h3>Verwendete Buchstaben:</h3>
+                        <h3>{guessedLetters}</h3>
                     </div>
                     <div className="col-start-2">
                         <form className="w-40" onSubmit={handleGuessVocal}>
                             <div className="grid grid-cols-2 grid-rows-2">
-                                <div className="col-start-1 bg-green-600 flex flex-col justify-center grid place-content-center">
+                                <div className="col-start-1 flex flex-col justify-center grid place-content-center">
                                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Vokal:</label>
                                 </div>
                                 <div className="col-start-2 flex flex-col justify-center grid place-content-center">
@@ -279,7 +282,7 @@ export default function Play() {
                                         <option>ü</option>
                                     </select>
                                 </div>
-                                <div className="row-start-2 col-span-2 bg-purple-600 grid place-content-center">
+                                <div className="row-start-2 col-span-2 grid mt-2">
                                     <button type="submit" className="btn" disabled={isGuessFinished}>Kaufen</button>
                                 </div>
                             </div>
@@ -288,13 +291,13 @@ export default function Play() {
                     <div className="col-start-2 row-start-2">
                         <form className="w-40" onSubmit={handleGuessConsonant}>
                             <div className="grid grid-cols-2 grid-rows-2">
-                                <div className="col-start-1 bg-green-600 flex flex-col justify-center grid place-content-center">
+                                <div className="col-start-1 flex flex-col justify-center grid place-content-center">
                                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Konsonant:</label>
                                 </div>
                                 <div className="col-start-2 flex flex-col justify-center grid place-content-center">
-                                    <input type="name" name="name" id="name" onChange={(e) => setConsonant(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-10 h-8" required="" />
+                                    <input type="name" name="name" id="name" onChange={(e) => setConsonant(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-16 h-12" required="" />
                                 </div>
-                                <div className="row-start-2 col-span-2 bg-purple-600 grid place-content-center">
+                                <div className="row-start-2 col-span-2 grid mt-2">
                                     <button type="submit" className="btn" disabled={isGuessFinished}>Raten</button>
                                 </div>
                             </div>
